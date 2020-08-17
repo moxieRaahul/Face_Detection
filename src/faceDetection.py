@@ -5,7 +5,7 @@ def draw_boundary(img, classifier, scaleFactor, minNeighbors, color, text):
     features = classifier.detectMultiScale(gray_img, scaleFactor, minNeighbors)
     coords = []
     for (x, y, w, h) in features:
-        cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
+        cv2.rectangle(img, (x,y), (x+w, y+h), color, 2) 
         #cv2.putText(img, text, (x, y-4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
         coords = [x, y, w, h]
     return coords
